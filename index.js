@@ -53,7 +53,7 @@ function App() {
               )}
 
               <div className="row">
-                <button onClick={getNewQuote}>New Quote</button>
+                <button onClick={getNewQuote} className="btn btn-primary">New Quote</button>
               </div>
             </div>
           </div>
