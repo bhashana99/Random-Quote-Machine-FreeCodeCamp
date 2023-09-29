@@ -31,7 +31,10 @@ function App() {
   
     const { author, source } = splitAuthor(randomQuote.author || "");
 
-    
+    const getNewQuote = ()=>{
+        let randomIndex = Math.floor(Math.random() * quotes.length);
+        setRandomQuote(quotes[randomIndex]);
+    }
   
     return (
       <div className="container pt-5">
@@ -48,6 +51,10 @@ function App() {
               ) : (
                 <h2>Loading...</h2>
               )}
+
+              <div className="row">
+                <button onClick={getNewQuote}>New Quote</button>
+              </div>
             </div>
           </div>
         </div>
